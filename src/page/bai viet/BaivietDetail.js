@@ -13,16 +13,18 @@ import {
 
 import "../../scss/baiviet_detail.scss";
 import BannerHeader from "../bannerHeader";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import moment from "moment";
+
 
 const BaivietDetail = () => {
   const [isShowVideo, handleSetVideo, setIsLoading] = useOutletContext();
   const navigate = useNavigate();
   const params = useParams();
-
+  
   const [detail, setDetail] = useState("");
   const [mediaHome, setMediaHome] = useState("");
+  const currentUrl = window.location.href;
 
   const fetch_DetialBaiviet = async () => {
     const res = await callGetdetail_Baiviet(params?.slug);
@@ -61,6 +63,7 @@ const BaivietDetail = () => {
         <meta property="og:title" content={detail?.tieude} />
         <meta property="og:description" content={detail?.meta_des} />
         <meta property="og:image" content={`${process.env.REACT_APP_BACKEND_URL}/images/banner/${detail?.thumbnail}`}/>
+        <meta property="og:url" content={currentUrl} />
 
       </Helmet>
 

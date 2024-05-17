@@ -6,7 +6,7 @@ import { useLocation, useNavigate, useOutletContext } from "react-router-dom";
 import BannerHeader from "../bannerHeader";
 import moment from "moment";
 import { Flex, Input, Pagination } from "antd";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { TfiEye } from "react-icons/tfi";
 import Search from "antd/es/input/Search";
 import LienHe from "../lien he/LienHe";
