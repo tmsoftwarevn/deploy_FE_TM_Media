@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 import { callDeleteMenu_byId, callMenu_byid } from "../../../service/api";
 import { CiEdit } from "react-icons/ci";
+import { MdDelete } from "react-icons/md";
 import {
   Button,
   Checkbox,
@@ -12,7 +13,6 @@ import {
   message,
   notification,
 } from "antd";
-import { MdDelete } from "react-icons/md";
 import UpdateMenu from "./ModalUpdateMenu";
 import AddMenu from "./ModalAddMenu";
 

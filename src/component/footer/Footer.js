@@ -13,6 +13,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
+import chungnhan from "../../assets/chungnhan.jpg";
 
 const Footer = () => {
   const [menu_video, setMenu_video] = useState([]);
@@ -179,6 +180,16 @@ const Footer = () => {
                 );
               })}
             </ul>
+            <img
+              src={chungnhan}
+              style={{cursor: "pointer"}}
+              onClick={() =>
+                window.open(
+                  "https://www.dmca.com/Protection/Status.aspx?id=cc5c8a96-e272-498c-adee-06713b87922e&refurl=https%3a%2f%2ftmmedia.pro%2f&rlo=true",
+                 
+                )
+              }
+            />
           </div>
           <div class="footer-col col-md-3">
             <h4>Xây kênh</h4>

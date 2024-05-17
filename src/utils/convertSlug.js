@@ -7,7 +7,7 @@ export const nonAccentVietnamese = (str) => {
   str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
   str = str.replace(/O|Ó|Ò|Õ|Ọ|Ô|Ố|Ồ|Ỗ|Ộ|Ơ|Ớ|Ờ|Ỡ|Ợ|Ở/g, "O");
   str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
-  str = str.replace(/U|Ú|Ù|Ũ|Ụ|Ư|Ứ|Ừ|Ữ|Ự/g, "U");
+  str = str.replace(/U|Ú|Ù|Ũ|Ụ|Ư|Ứ|Ừ|Ữ|Ự|Ủ/g, "U");
   str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
   str = str.replace(/Y|Ý|Ỳ|Ỹ|Ỵ/g, "Y");
   str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");

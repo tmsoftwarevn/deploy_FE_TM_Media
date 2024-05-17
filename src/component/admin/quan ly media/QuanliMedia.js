@@ -205,7 +205,7 @@ const QuanliMedia = () => {
               rows={3}
               onChange={(e) => setKey_word(e.target.value)}
               value={key_word}
-              maxLength={255}
+              maxLength={500}
             />
           </Card>
         </Col>
@@ -215,7 +215,7 @@ const QuanliMedia = () => {
               rows={3}
               value={meta_des}
               onChange={(e) => setMeta_des(e.target.value)}
-              maxLength={255}
+              maxLength={500}
             />
           </Card>
         </Col>

@@ -60,6 +60,8 @@ const BaivietDetail = () => {
         <meta name="keywords" content={detail?.key_word} />
         <meta property="og:title" content={detail?.tieude} />
         <meta property="og:description" content={detail?.meta_des} />
+        <meta property="og:image" content={`${process.env.REACT_APP_BACKEND_URL}/images/banner/${detail?.thumbnail}`}/>
+
       </Helmet>
 
       <BannerHeader media={mediaHome} handleSetVideo={handleSetVideo} />

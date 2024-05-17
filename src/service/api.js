@@ -115,7 +115,7 @@ export const callAddMedia = (
     noidung,
     type_id,
     slug,
-    title_menu
+    title_menu,
   });
 };
 
@@ -200,7 +200,7 @@ export const callUpdateBaiviet = (
     mota_ngan,
     active,
     slug,
-    uu_tien
+    uu_tien,
   });
 };
 
@@ -220,13 +220,15 @@ export const callGet_baiviet_noibat = () => {
   return axios.get(`/api/v1/tintuc-noibat`);
 };
 
-export const call_up_view_baiviet = (id) =>{
+export const call_up_view_baiviet = (id) => {
   return axios.put(`/api/v1/baiviet_view/${id}`);
-}
+};
 
-export const call_search_baiviet = (search, page, limit) =>{
-  return axios.get(`/api/v1/search-baiviet?search=${search}&page=${page}&limit=${limit}`)
-}
+export const call_search_baiviet = (search, page, limit) => {
+  return axios.get(
+    `/api/v1/search-baiviet?search=${search}&page=${page}&limit=${limit}`
+  );
+};
 //////
 export const callUpdateTrangchu = (
   key_word,
@@ -267,4 +269,13 @@ export const callUpdateTrangchu = (
 };
 export const callDetailTrangchu = () => {
   return axios.get(`/api/v1/trang-chu`);
+};
+
+export const callSendMail = (email, name, phone, noidung) => {
+  return axios.post(`/api/v1/mail`, {
+    email,
+    name,
+    phone,
+    noidung,
+  });
 };

@@ -213,7 +213,7 @@ const UpdateBaiviet = (props) => {
                 <TextArea
                   rows={3}
                   onChange={(e) => setKey_word(e.target.value)}
-                  maxLength={255}
+                  maxLength={500}
                   value={key_word}
                 />
               </Card>
@@ -223,7 +223,7 @@ const UpdateBaiviet = (props) => {
                 <TextArea
                   rows={3}
                   onChange={(e) => setMeta_des(e.target.value)}
-                  maxLength={255}
+                  maxLength={500}
                   value={meta_des}
                 />
               </Card>
@@ -233,7 +233,7 @@ const UpdateBaiviet = (props) => {
                 <TextArea
                   rows={3}
                   onChange={(e) => setMota_ngan(e.target.value)}
-                  maxLength={255}
+                  maxLength={500}
                   value={mota_ngan}
                 />
               </Card>

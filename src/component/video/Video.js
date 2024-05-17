@@ -74,7 +74,7 @@ const Video = (props) => {
                         className="media_carousel_group"
                         onClick={() => handleSetVideo(true, item.link)}
                       >
-                        <LazyLoad height={400} once offset={100}>
+                        <LazyLoad height={400} once offset={200}>
                           <img
                             src={`${process.env.REACT_APP_BACKEND_URL}/images/banner/${item?.video_bg}`}
                             alt=""

@@ -4,7 +4,7 @@ import iconphone from "../../assets/icon-phone.png";
 import iconemail from "../../assets/icon-email.png";
 import { useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
-import { callAddLienhe, callDetailTrangchu } from "../../service/api";
+import { callAddLienhe, callDetailTrangchu, callSendMail } from "../../service/api";
 import { message } from "antd";
 import { Helmet } from "react-helmet";
 import { useLocation, useOutletContext } from "react-router-dom";
@@ -43,6 +43,7 @@ const LienHe = () => {
     e.preventDefault();
 
     const res = await callAddLienhe(name, phone, email, noidung);
+    const m = await callSendMail(email, name, phone, noidung)
     if (res && res.EC === 1) {
       // message.success("Cảm ơn bạn đã liên hệ với TM Media");
       Swal.fire({
