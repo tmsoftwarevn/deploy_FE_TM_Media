@@ -5,13 +5,14 @@ import "../../scss/dichvumedia.scss";
 import "../../scss/bannerHeader.scss";
 import Video from "../video/Video";
 import BannerHeader from "../../page/bannerHeader";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-stuff";
 
 const DichVuMedia = () => {
   const [isShowVideo, handleSetVideo, setIsLoading] = useOutletContext();
   const location = useLocation();
   const params = useParams();
   const [detailMedia, setDetailMedia] = useState("");
+  const currentUrl = window.location.href;
 
   const fetch_DetailMedia = async () => {
     let res = await callDetailMedia(params.slug);
@@ -30,9 +31,18 @@ const DichVuMedia = () => {
       <Helmet defer={false}>
         <title>{detailMedia?.title_menu}</title>
         <meta name="description" content={detailMedia?.meta_des} />
-        <meta name="keywords" content={detailMedia?.key_word} />
+        {/* <meta name="keywords" content={detailMedia?.key_word} /> */}
         <meta property="og:title" content={detailMedia?.title_menu} />
         <meta property="og:description" content={detailMedia?.meta_des} />
+
+        <meta property="og:image" content={`${process.env.REACT_APP_BACKEND_URL}/images/banner/${detailMedia?.video_bg}`}/>
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href={currentUrl} />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
       </Helmet>
 
       <BannerHeader media={detailMedia} handleSetVideo={handleSetVideo} />

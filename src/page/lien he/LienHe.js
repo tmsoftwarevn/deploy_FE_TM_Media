@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { callAddLienhe, callDetailTrangchu, callSendMail } from "../../service/api";
 import { message } from "antd";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-stuff";
 import { useLocation, useOutletContext } from "react-router-dom";
 import BannerHeader from "../bannerHeader";
 import Swal from "sweetalert2";

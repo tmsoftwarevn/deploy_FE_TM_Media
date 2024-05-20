@@ -13,7 +13,7 @@ import {
 
 import "../../scss/baiviet_detail.scss";
 import BannerHeader from "../bannerHeader";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-stuff";
 import moment from "moment";
 
 
@@ -59,11 +59,17 @@ const BaivietDetail = () => {
       <Helmet defer={false}>
         <title>{detail?.tieude}</title>
         <meta name="description" content={detail?.meta_des} />
-        <meta name="keywords" content={detail?.key_word} />
+        {/* <meta name="keywords" content={detail?.key_word} /> */}
         <meta property="og:title" content={detail?.tieude} />
         <meta property="og:description" content={detail?.meta_des} />
+
         <meta property="og:image" content={`${process.env.REACT_APP_BACKEND_URL}/images/banner/${detail?.thumbnail}`}/>
         <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={currentUrl} />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
       </Helmet>
 
